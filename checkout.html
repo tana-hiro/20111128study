@@ -5,18 +5,39 @@
         </head>
         <body>
                 <h1>チェックアウト</h1>
-                <p>gitのチェックアウトに関する機能</p>
-		<h2>既存のデータから作成する</h2>
+                <p>gitのチェックアウトに関する機能(SVN的な意味合い)</p>
+		<h2>作成</h2>
+		<h3>既存のデータから作成する</h3>
+		<div class="pickup">
 		<pre>
 cd ~/projects/myproject
 git init
 git add .
 		</pre>
-		<h2>既存のリポジトリから作成する</h2>
+		</div>
+		<h3>既存のリポジトリから作成する</h3>
 		<pre>
 git clone ~/existing/repo ~/new/repo
 git clone git://host.org/project.git
 git clone ssh://you@host.org/proj.git
 		</pre>
+		<h2>更新</h2>
+		<h3>originから最新の変更を変更する</h3>
+		<pre>
+git fetch
+		</pre>
+		<p class="info">(マージはしない)</p>
+		<div class="pickup">
+		<h3>originから最新の変更を取得する</h3>
+		<pre>
+git pull
+		</pre>
+		<p class="info">(取得した後、マージする)</p>
+		</div>
+		<h3>他人から届いたパッチを当てる</h3>
+		<pre>
+git am -3 patch.mbox
+		</pre>
+		<p class="info">(競合発生時は、git am -resolved で解消する git am --resolved )</p>
         </body>
 </html>

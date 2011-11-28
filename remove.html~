@@ -16,8 +16,6 @@
 		<pre>git show $id</pre>
 		<h2>特定$idの$fileを表示する</h2>
 		<pre>git show $id:$file</pre>
-		<h2>ローカルブランチをすべて表示する</h2>
-		<pre>git branch</pre>
 		(*´ω｀*)
 	</body>
 </html>
